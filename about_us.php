@@ -13,14 +13,14 @@
             'welcome' => 'Selamat Datang di WeThrift',
             'tagline' => 'Di Mana Gaya Bertemu Keberlanjutan',
             'environmental' => 'Pelestarian Lingkungan',
-            'environmental_desc' => 'Kami berkomitmen untuk melestarikan lingkungan melalui praktik fashion berkelanjutan dan pengurangan limbah.',
+            'environmental_desc' => 'Kami berkomitmen untuk melestarikan lingkungan melalui fashion yang akan berkelanjutan dengan pengurangan limbah.',
             'price' => 'Harga Terjangkau',
             'price_desc' => 'Fashion berkualitas tidak harus mahal. Kami menawarkan barang premium dengan harga yang terjangkau untuk semua orang.',
             'quality' => 'Jaminan Kualitas',
-            'quality_desc' => 'Setiap barang diperiksa dengan teliti untuk memastikan memenuhi standar kualitas dan keaslian kami yang tinggi.',
+            'quality_desc' => 'Setiap barang diperiksa dengan teliti untuk memastikan memenuhi standar kualitas dan keaslian produk yang tinggi.',
             'our_story' => 'Cerita Kami',
-            'story_lead' => 'WeThrift didirikan dengan visi sederhana namun kuat: menjadikan fashion berkelanjutan dapat diakses oleh semua orang sambil melestarikan lingkungan kita.',
-            'story_desc' => 'Kami percaya pada kekuatan konsumsi yang bertanggung jawab dan kemampuannya untuk menciptakan perubahan positif. Setiap barang dalam koleksi kami merepresentasikan kesempatan untuk mengurangi limbah, mendukung praktik berkelanjutan, dan tetap tampil modis.',
+            'story_lead' => 'WeThrift didirikan dengan visi sederhana namun kuat: menjadikan fashion berkelanjutan dapat diakses oleh semua orang sambil melestarikan lingkungan alam.',
+            'story_desc' => 'Kami percaya pada konsumsi yang bertanggung jawab dan kemampuannya untuk menciptakan perubahan positif. Setiap barang dalam koleksi kami merepresentasikan kesempatan untuk mengurangi limbah, mendukung kegiatan berkelanjutan, dan tetap tampil modis dan keren.',
             'copyright' => 'Hak Cipta'
         ],
         'en' => [
