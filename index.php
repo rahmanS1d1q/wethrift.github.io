@@ -5,7 +5,7 @@ if (file_exists('./functions/common_function.php')) {
     include('./functions/common_function.php');
 } else {
     // Jika file common_function.php tidak ditemukan, buat koneksi database manual
-    $con = mysqli_connect("153.92.15.44", "u523791406_wethrift", "Second123.", "u523791406_wethrift");
+    $con = mysqli_connect("153.92.15.44", "u523791406_wethrift", "", "u523791406_wethrift");
     if (!$con) {
         die("Connection failed: " . mysqli_connect_error());
     }
