@@ -1,7 +1,7 @@
 <?php
 // ===== BAGIAN INISIALISASI =====
 // Mencoba untuk memasukkan file common_function.php yang berisi fungsi-fungsi umum
-if (file_exists('../functions/common_function.php')) {
+if (file_exists('./functions/common_function.php')) {
     include('../functions/common_function.php');
 } else {
     // Jika file common_function.php tidak ditemukan, buat koneksi database manual
