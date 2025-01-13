@@ -76,9 +76,9 @@ $decrease = "<span style='color: red; font-size: 24px;'>$decrease_symbol</span>"
                 // Format transaction details to include commas for monetary values
                 if (isset($components[1])) {
                     $components[1] = preg_replace_callback(
-                        '/Rp(\d+)/',
+                        '/Rp.(\d+)/',
                         function($matches) {
-                            return 'Rp' . number_format((float)$matches[1], 2, '.', ',');
+                            return 'Rp.' . number_format((float)$matches[1], 2, '.', ',');
                         },
                         $components[1]
                     );

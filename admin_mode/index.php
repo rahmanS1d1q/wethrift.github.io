@@ -7,6 +7,7 @@ if(isset($_GET['admin_id'])) {
     if($admin_id == 2) { $name = "YUNUS"; }
     if($admin_id == 3) { $name = "KHAFID"; }
     if($admin_id == 4) { $name = "WILDAN"; }
+    if($admin_id == 5) { $name = "lecture"; }
 }
 ?>
 

@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ===== META TAGS & RESOURCES ===== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeThrift - Shopping Experience</title>
+    <!-- Favicon untuk tab browser -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome untuk ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- ===== CUSTOM CSS STYLES ===== -->
     <style>
+        /* Reset CSS default dan pengaturan font */
         * {
             margin: 0;
             padding: 0;
@@ -14,6 +20,7 @@
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
 
+        /* Styling untuk body dengan gradient background */
         body {
             min-height: 100vh;
             background: linear-gradient(135deg, #00B4DB, #0083B0);
@@ -26,6 +33,7 @@
             overflow: hidden;
         }
 
+        /* Container utama untuk konten */
         .container {
             text-align: center;
             padding: 2rem;
@@ -33,6 +41,7 @@
             z-index: 1;
         }
 
+        /* Background animasi dengan pattern */
         .animated-background {
             position: absolute;
             top: 0;
@@ -52,11 +61,13 @@
             z-index: 0;
         }
 
+        /* Animasi untuk background pattern */
         @keyframes moveBackground {
             0% { background-position: 0 0; }
             100% { background-position: 100px 100px; }
         }
 
+        /* Styling untuk logo */
         .logo {
             font-size: 3.5rem;
             font-weight: 700;
@@ -66,6 +77,7 @@
             animation: fadeInDown 0.8s ease forwards;
         }
 
+        /* Styling untuk subtitle */
         .subtitle {
             font-size: 1.5rem;
             margin-bottom: 3rem;
@@ -74,6 +86,7 @@
             animation: fadeInDown 0.8s ease 0.2s forwards;
         }
 
+        /* Container untuk tombol role */
         .roles {
             display: flex;
             gap: 1.5rem;
@@ -82,6 +95,7 @@
             margin-bottom: 2rem;
         }
 
+        /* Styling untuk tombol role */
         .role-btn {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -100,20 +114,24 @@
             animation: fadeInUp 0.8s ease forwards;
         }
 
+        /* Animation delay untuk setiap tombol role */
         .role-btn:nth-child(1) { animation-delay: 0.4s; }
         .role-btn:nth-child(2) { animation-delay: 0.6s; }
         .role-btn:nth-child(3) { animation-delay: 0.8s; }
 
+        /* Hover effect untuk tombol role */
         .role-btn:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-5px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
+        /* Styling untuk ikon dalam tombol */
         .role-btn i {
             font-size: 1.2rem;
         }
 
+        /* Styling untuk tombol home */
         .home-btn {
             background: rgba(255, 255, 255, 0.9);
             color: #0083B0;
@@ -129,12 +147,14 @@
             animation: fadeInUp 0.8s ease 1s forwards;
         }
 
+        /* Hover effect untuk tombol home */
         .home-btn:hover {
             background: white;
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
+        /* Styling untuk footer */
         footer {
             position: fixed;
             bottom: 0;
@@ -147,6 +167,7 @@
             animation: fadeIn 0.8s ease 1.2s forwards;
         }
 
+        /* Styling untuk social media links */
         .social-links {
             margin-top: 0.5rem;
         }
@@ -165,6 +186,7 @@
             transform: translateY(-3px);
         }
 
+        /* Animasi untuk fade in dari atas */
         @keyframes fadeInDown {
             to {
                 opacity: 1;
@@ -172,6 +194,7 @@
             }
         }
 
+        /* Animasi untuk fade in dari bawah */
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -179,13 +202,14 @@
             }
         }
 
+        /* Animasi fade in biasa */
         @keyframes fadeIn {
             to {
                 opacity: 1;
             }
         }
 
-        /* Responsive Design */
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -210,7 +234,7 @@
             }
         }
 
-        /* Interactive Particles */
+        /* Styling untuk particle effects */
         .particles {
             position: absolute;
             width: 100%;
@@ -229,13 +253,18 @@
     </style>
 </head>
 <body>
+    <!-- Background animasi -->
     <div class="animated-background"></div>
+    <!-- Container untuk particle effect -->
     <div class="particles" id="particles"></div>
 
+    <!-- Container utama -->
     <div class="container">
+        <!-- Logo dan subtitle -->
         <h1 class="logo">Welcome To WeThrift</h1>
         <h2 class="subtitle">Choose your experience</h2>
 
+        <!-- Tombol-tombol role -->
         <div class="roles">
             <a href="./customer_mode/customer_login.php" class="role-btn">
                 <i class="fas fa-shopping-bag"></i>
@@ -251,12 +280,14 @@
             </a>
         </div>
 
+        <!-- Tombol kembali ke home -->
         <a href="./index.php" class="home-btn">
             <i class="fas fa-home"></i>
             Return Home
         </a>
     </div>
 
+    <!-- Footer dengan copyright dan social media links -->
     <footer>
         <div>© 2025 WeThrift | Rahman Shiddiq</div>
         <div class="social-links">
@@ -267,26 +298,28 @@
         </div>
     </footer>
 
+    <!-- JavaScript untuk animasi -->
     <script>
-        // Interactive Particles Animation
+        // Fungsi untuk membuat particle effects
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 50;
 
+            // Membuat particle elements
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
                 
-                // Random size between 2-6px
+                // Set ukuran random
                 const size = Math.random() * 4 + 2;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
                 
-                // Random position
+                // Set posisi random
                 particle.style.left = `${Math.random() * 100}%`;
                 particle.style.top = `${Math.random() * 100}%`;
                 
-                // Random animation
+                // Set animasi dengan durasi random
                 const duration = Math.random() * 20 + 10;
                 particle.style.animation = `float ${duration}s linear infinite`;
                 
@@ -294,7 +327,7 @@
             }
         }
 
-        // Add floating animation
+        // Menambahkan animasi floating
         const style = document.createElement('style');
         style.textContent = `
             @keyframes float {
@@ -313,10 +346,10 @@
         `;
         document.head.appendChild(style);
 
-        // Initialize particles
+        // Inisialisasi particles
         createParticles();
 
-        // Add hover effect sound
+        // Menambahkan hover effect
         const buttons = document.querySelectorAll('.role-btn, .home-btn');
         buttons.forEach(button => {
             button.addEventListener('mouseover', () => {
